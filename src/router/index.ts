@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginForm from '../components/LoginForm.vue'
 import BlankPage from '../components/BlankPage.vue'
+import Menu from '../components/page-menu.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
     name: 'Login',
     component: LoginForm
   },
@@ -12,6 +13,11 @@ const routes = [
     path: '/blank',
     name: 'BlankPage',
     component: BlankPage
+  },
+  {
+    path: '/menu',
+    name: 'menu',
+    component: Menu
   }
 ]
 

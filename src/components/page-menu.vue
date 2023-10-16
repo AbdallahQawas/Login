@@ -1,0 +1,147 @@
+<template>
+  <div class="bg-gray-200 flex h-screen">
+    <div class="bg-sky-500 flex flex-col w-64">
+      <div v-for="(page, index) in pages" :key="index">
+        <button
+          v-if="!page.subPage"
+          class="px-4 py-2 w-full flex space-x-2 hover:bg-white hover:text-blue-500 text-white font-semibold text-start"
+        >
+          <component class="w-5 h-5" :is="isComponent(page.icon || '')"></component>
+          <span>
+            {{ page.label }}
+          </span>
+        </button>
+        <sub-menu v-if="page.subPage" :page="page"></sub-menu>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { ref } from 'vue'
+import subMenu from './sub-menu.vue'
+import iconifyDashboard from '@/icons/iconify-dashboard.vue'
+import iconifyWater from '@/icons/iconify-water.vue'
+import iconifyControlCenter from '@/icons/iconify-control-center.vue'
+import iconifyEpanetDemo from '@/icons/iconify-epanet-demo.vue'
+import iconifyAlerts from '@/icons/iconify-alerts.vue'
+import iconifyZones from '@/icons/iconify-zones.vue'
+import iconifyMonitoring from '@/icons/iconify-monitoring.vue'
+import iconifyReports from '@/icons/iconify-reports.vue'
+import iconifyLosses from '@/icons/iconify-losses.vue'
+import iconifyDevices from '@/icons/iconify-devices.vue'
+import iconifyPredictions from '@/icons/iconify-predictions.vue'
+import iconifyAnomalies from '@/icons/iconify-anomalies.vue'
+import iconifyOnDemand from '@/icons/iconify-on-demand.vue'
+import iconifyIncidents from '@/icons/iconify-incidents.vue'
+import iconifyOctopo from '@/icons/iconify-octopo.vue'
+
+function isComponent(name: string) {
+  let temp = {
+    iconifyDashboard,
+    iconifyWater,
+    iconifyControlCenter,
+    iconifyEpanetDemo,
+    iconifyAlerts,
+    iconifyLosses,
+    iconifyPredictions,
+    iconifyAnomalies,
+    iconifyOnDemand,
+    iconifyIncidents,
+    iconifyOctopo,
+    iconifyMonitoring,
+    iconifyReports,
+    iconifyDevices,
+    iconifyZones
+  }
+  return temp[name]
+}
+
+export type pageType = {
+  label: string
+  subPage?: subPageType[]
+  icon?: string
+}
+export type subPageType = {
+  label: string
+}
+
+let pages = ref<pageType[]>([
+  {
+    label: 'Dashboard',
+    icon: 'iconifyDashboard'
+  },
+  {
+    label: 'Water Quality',
+    icon: 'iconifyWater'
+  },
+  {
+    label: 'Control center',
+    icon: 'iconifyControlCenter',
+    subPage: []
+  },
+  {
+    label: 'Epanet Demo',
+    icon: 'iconifyEpanetDemo',
+    subPage: [
+      {
+        label: 'Epanet Demo'
+      },
+      {
+        label: 'Model View'
+      },
+      {
+        label: 'Default View'
+      }
+    ]
+  },
+  {
+    label: 'Alerts',
+    icon: 'iconifyAlerts'
+  },
+  {
+    label: 'Zones',
+    icon: 'iconifyZones',
+    subPage: []
+  },
+  {
+    label: 'Monitoring',
+    icon: 'iconifyMonitoring',
+    subPage: []
+  },
+  {
+    label: 'Reports',
+    icon: 'iconifyReports',
+    subPage: []
+  },
+  {
+    label: 'Losses',
+    icon: 'iconifyLosses'
+  },
+  {
+    label: 'Devices',
+    icon: 'iconifyDevices',
+    subPage: []
+  },
+  {
+    label: 'Predictions',
+    icon: 'iconifyPredictions'
+  },
+  {
+    label: 'Anomalies',
+    icon: 'iconifyAnomalies'
+  },
+  {
+    label: 'On Demand',
+    icon: 'iconifyOnDemand'
+  },
+  {
+    label: 'Incidents',
+    icon: 'iconifyIncidents'
+  },
+  {
+    label: 'Octopp',
+    icon: 'iconifyOctopo'
+  }
+])
+</script>
