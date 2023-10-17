@@ -13,11 +13,6 @@ const routes = [
     path: '/blank',
     name: 'BlankPage',
     component: BlankPage
-  },
-  {
-    path: '/menu',
-    name: 'menu',
-    component: Menu
   }
 ]
 
