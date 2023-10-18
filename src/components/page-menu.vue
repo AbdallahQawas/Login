@@ -2,8 +2,8 @@
   <div class="bg-gray-200 flex h-screen">
     <div class="bg-sky-500 flex flex-col px-6 space-y-1">
       <div class="w-48" v-for="(page, index) in pages" :key="index">
-        <button
-          @click="pageClicked(index)"
+        <router-link
+          :to="page.label"
           v-if="!page.subPage"
           class="rounded-md px-4 py-2 w-full flex space-x-2 hover:bg-white hover:text-blue-500 text-white font-semibold text-start"
         >
@@ -11,7 +11,7 @@
           <span>
             {{ page.label }}
           </span>
-        </button>
+        </router-link>
         <sub-menu v-if="page.subPage" :page="page"></sub-menu>
       </div>
     </div>
@@ -20,7 +20,6 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import pageHeader from './page-header.vue'
 import subMenu from './sub-menu.vue'
 import iconifyDashboard from '@/icons/iconify-dashboard.vue'
 import iconifyWater from '@/icons/iconify-water.vue'
@@ -37,10 +36,6 @@ import iconifyAnomalies from '@/icons/iconify-anomalies.vue'
 import iconifyOnDemand from '@/icons/iconify-on-demand.vue'
 import iconifyIncidents from '@/icons/iconify-incidents.vue'
 import iconifyOctopo from '@/icons/iconify-octopo.vue'
-
-const emit = defineEmits<{
-  (e: 'onPageClicked', label: string): void
-}>()
 
 function isComponent(name: string) {
   let temp = {
@@ -74,20 +69,20 @@ export type subPageType = {
 
 let pages = ref<pageType[]>([
   {
-    label: 'Dashboard',
+    label: 'dashboard',
     icon: 'iconifyDashboard'
   },
   {
-    label: 'Water Quality',
+    label: 'water Quality',
     icon: 'iconifyWater'
   },
   {
-    label: 'Control center',
+    label: 'control center',
     icon: 'iconifyControlCenter',
     subPage: []
   },
   {
-    label: 'Epanet Demo',
+    label: 'epanet Demo',
     icon: 'iconifyEpanetDemo',
     subPage: [
       {
@@ -150,8 +145,4 @@ let pages = ref<pageType[]>([
     icon: 'iconifyOctopo'
   }
 ])
-
-function pageClicked(index: number) {
-  emit('onPageClicked', pages.value[index].label)
-}
 </script>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginForm from '../components/LoginForm.vue'
 import BlankPage from '../components/BlankPage.vue'
-import Menu from '../components/page-menu.vue'
+import Dashboard from '../components/page-dashboard.vue'
 
 const routes = [
   {
@@ -13,6 +13,11 @@ const routes = [
     path: '/blank',
     name: 'BlankPage',
     component: BlankPage
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Dashboard
   }
 ]
 
