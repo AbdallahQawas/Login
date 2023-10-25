@@ -13,24 +13,24 @@
           />
           <input
             class="focus:outline-none border-b-2 focus:border-blue-400 my-1"
-            type="email"
             placeholder="Username"
+            v-model="username"
           />
           <input
             class="focus:outline-none border-b-2 focus:border-blue-400 my-1"
-            type="password"
             placeholder="Password"
+            v-model="password"
+            type="password"
           />
         </form>
-
-        <router-link to="/blank">
-          <button
-            id="login"
-            class="border-solid border-2 border-blue-500 hover:text-white hover:bg-blue-500 px-4 py-1 w-52 rounded-md"
-          >
-            Log IN
-          </button>
-        </router-link>
+        <button
+          @click="login"
+          id="login"
+          type="submit"
+          class="border-solid border-2 border-blue-500 hover:text-white hover:bg-blue-500 px-4 py-1 w-52 rounded-md"
+        >
+          Log IN
+        </button>
       </div>
       <div class="flex justify-between">
         <p class="my-auto">Contact sppourt</p>
@@ -41,5 +41,24 @@
 </template>
 
 <script lang="ts" setup>
-import { RouterLink } from 'vue-router'
+// import { useAuthStore } from '@/stores/auth'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const username = ref('')
+const password = ref('')
+
+// const authStore = useAuthStore()
+
+function login() {
+  if (username.value === 'abdallah' && password.value === '123') {
+    localStorage.setItem('username', username.value)
+    localStorage.setItem('password', password.value)
+    localStorage.setItem('Authentication', 'true')
+    localStorage.setItem('Authorization', 'false')
+    router.push('/')
+  }
+}
 </script>

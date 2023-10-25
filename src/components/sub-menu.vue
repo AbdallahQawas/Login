@@ -1,18 +1,20 @@
 <template>
   <button
     @click="displaySub = !displaySub"
-    class="px-4 py-2 w-full flex space-x-2 hover:bg-white hover:text-blue-500 text-white font-semibold text-start"
+    class="rounded-md px-4 py-2 w-full flex place-items-center space-x-2 hover:bg-white hover:text-blue-500 text-white font-semibold text-start"
   >
-    <component class="w-5 h-5" :is="isComponent(page.icon || '')"></component>
+    <component class="w-4 h-4" :is="isComponent(page.icon || '')"></component>
     <span>
       {{ page.label }}
     </span>
     <hero-chevron-right></hero-chevron-right>
   </button>
-  <div v-if="displaySub" class="flex flex-col">
+  <div v-if="displaySub" class="flex flex-col px-5 py-2 text-white">
+    <hr />
     <div v-for="(sub, index) in page.subPage" :key="index">
       {{ sub.label }}
     </div>
+    <hr />
   </div>
 </template>
 

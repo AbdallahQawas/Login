@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row">
-    <div>
+    <div class="h-full">
       <pageMenu></pageMenu>
     </div>
     <div class="w-full">
@@ -17,4 +17,5 @@
 <script setup lang="ts">
 import pageMenu from './page-menu.vue'
 import pageHeader from './page-header.vue'
+import PageTest from './page-test.vue'
 </script>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import pageTemplate from './components/page-template.vue'
+import loginFormVue from './components/login-form.vue'
 </script>
 
 <template>
   <div>
-    <pageTemplate />
+    <router-view></router-view>
   </div>
-  <router-view />
 </template>
 
 <style></style>
