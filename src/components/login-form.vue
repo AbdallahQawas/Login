@@ -41,7 +41,6 @@
 </template>
 
 <script lang="ts" setup>
-// import { useAuthStore } from '@/stores/auth'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -49,8 +48,6 @@ const router = useRouter()
 
 const username = ref('')
 const password = ref('')
-
-// const authStore = useAuthStore()
 
 function login() {
   if (username.value === 'abdallah' && password.value === '123') {

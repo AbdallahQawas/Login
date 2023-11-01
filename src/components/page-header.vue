@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between items-baseline text-blue-500 text-lg font-bold">
-    <div class="m-3">{{ route.path.replace('/', '') }}</div>
+    <div class="m-3">{{ route.name }}</div>
     <div class="relative">
       <button @click="toggleDropdown" class="flex m-3 x-1 space-x-1 items-center">
         <span class="py-1"><iconifyProfile class="h-5 w-5"></iconifyProfile> </span>
