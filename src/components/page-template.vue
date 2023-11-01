@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-row">
-    <div class="h-screen">
+  <div class="flex flex-row h-screen">
+    <div class="h-full">
       <pageMenu></pageMenu>
     </div>
-    <div class="w-full h-screen">
+    <div class="flex flex-col w-full h-full">
       <div>
         <pageHeader page-title="" tenant-name="Abdallah"></pageHeader>
       </div>
