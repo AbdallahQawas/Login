@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts" setup>
-function reroute(test: string) {
-  return router.push(test)
+function reroute(routeName: string) {
+  return router.push(routeName)
 }
 const router = useRouter()
 import { useRouter } from 'vue-router'

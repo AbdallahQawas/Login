@@ -5,9 +5,9 @@
     </div>
     <div class="flex flex-col w-full h-full">
       <div>
-        <pageHeader page-title="" tenant-name="Abdallah"></pageHeader>
+        <pageHeader page-title="" tenant-name="abdallah"></pageHeader>
       </div>
-      <div class="bg-gray-200 h-full py-0.5">
+      <div class="bg-gray-200 overflow-auto h-full py-0.5">
         <slot name="content"></slot>
       </div>
     </div>

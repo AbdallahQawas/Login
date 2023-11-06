@@ -17,21 +17,22 @@ const routes = [
         path: '/dashboard',
         name: 'Dashboard',
         component: Dashboard,
-        meta: { requiresAuth: true }
+        meta: { requiresAuth: false }
       },
       {
         path: '/waterquality',
         name: 'Water Quality',
         component: waterQuality,
         meta: { requiresAuth: true }
-      },
-      {
-        path: '/alerts',
-        name: 'Alerts',
-        component: pageAlert,
-        meta: { requiresAuth: false }
       }
     ]
+  },
+
+  {
+    path: '/alerts',
+    name: 'Alerts',
+    component: pageAlert,
+    meta: { requiresAuth: true }
   },
   {
     path: '/login',
@@ -72,7 +73,7 @@ router.beforeEach((to, from, next) => {
     next('/login')
   }
 
-  if (!!auth && !to.meta.requiresAuth) {
+  if (!!auth && to.meta.requiresAuth) {
     next('/auth')
   } else {
     next()

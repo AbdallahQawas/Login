@@ -1,48 +1,56 @@
 <template>
-  <div class="m-4 text-blue-500 rounded-md bg-white max-h-96 overflow-auto">
-    <div class="w-[77.9rem]">
-      <table class="w-full">
-        <thead class="sticky top-0 bg-white">
-          <tr>
-            <th></th>
-            <th v-for="(label, index) in labels" :key="index">
-              <div class="flex">
-                <div v-if="!showHide[index]">
-                  {{ label }}
+  <div>
+    <div class="text-blue-500 rounded-md border border-blue-500 max-h-96 overflow-auto">
+      <div class="w-full">
+        <table class="w-full">
+          <thead class="sticky top-0 bg-white">
+            <tr>
+              <th></th>
+              <th class="p-2" v-for="(label, index) in labels" :key="index">
+                <div class="flex">
+                  <div v-if="!showHide[index]">
+                    {{ label }}
+                  </div>
+                  <button class="py-1.5 px-1" @click="toggleCol(index)">
+                    <iconify-eye> </iconify-eye>
+                  </button>
+                  <table-sort
+                    v-if="!!data.length"
+                    :data="data"
+                    :col-index="index"
+                    @on-data-sorted="dataSorted"
+                  ></table-sort>
                 </div>
-                <button class="py-1.5 px-1" @click="toggleCol(index)">
-                  <iconify-eye> </iconify-eye>
-                </button>
-              </div>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr
-            v-for="(row, rowIndex) in data"
-            :key="rowIndex"
-            :class="rowIndex % 2 === 0 ? 'bg-gray-300' : 'bg-white'"
-          >
-            <td class="flex px-2">
-              <button
-                @click="checkBoxClicked(rowIndex)"
-                class="bg-gray-200 hover:bg-blue-400 w-4 h-4 rounded-md my-3"
-              ></button>
-            </td>
-
-            <td
-              @click="cellPosition(rowIndex, colIndex)"
-              v-for="(cell, colIndex) in row"
-              :key="colIndex"
-              class="whitespace-nowrap p-2"
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="(row, rowIndex) in data"
+              :key="rowIndex"
+              :class="rowIndex % 2 === 0 ? 'bg-gray-300' : 'bg-white'"
             >
-              <div v-if="!showHide[colIndex]">
-                <data-view :data="cell"></data-view>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <td class="flex px-2">
+                <button
+                  @click="checkBoxClicked(rowIndex)"
+                  class="bg-gray-200 hover:bg-blue-400 w-4 h-4 rounded-md my-3"
+                ></button>
+              </td>
+
+              <td
+                @click="cellPosition(rowIndex, colIndex)"
+                v-for="(cell, colIndex) in row"
+                :key="colIndex"
+                class="whitespace-nowrap p-2"
+              >
+                <div v-if="!showHide[colIndex]">
+                  <data-view :data="cell"></data-view>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
@@ -53,6 +61,8 @@ import iconifyEye from '../../icons/iconify-eye.vue'
 import dataView from '../data-view.vue'
 import type { dataType } from './table-view.types'
 
+import tableSort from '@/components/table-view/table-sort.vue'
+
 const props = defineProps<propsType>()
 
 type propsType = {
@@ -60,6 +70,11 @@ type propsType = {
   data: dataType[][]
   stickyCol?: boolean
 }
+
+const emit = defineEmits<{
+  (e: 'onDataChanged', items: dataType[][]): void
+}>()
+
 type showHideType = { [key: number]: boolean }
 let showHide = ref<showHideType>([])
 
@@ -73,5 +88,9 @@ function checkBoxClicked(index: number) {
 
 function cellPosition(row: number, col: number) {
   alert(`cell position is (${row},${col})`)
+}
+
+function dataSorted(sortedData: dataType[][]) {
+  emit('onDataChanged', sortedData)
 }
 </script>

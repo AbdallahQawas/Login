@@ -1,7 +1,7 @@
 <template>
   <page-template>
     <template #content>
-      <div>test</div>
+      <div>Water Quality Page</div>
     </template>
   </page-template>
 </template>

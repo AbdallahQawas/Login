@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center">
     <div class="text-red-600">You have no Authorization for this page</div>
-    <button class="bg-blue-500 text-white" @click="homePage()">Go to Home Page</button>
+    <button class="bg-blue-500 text-white p-2" @click="homePage()">Go to Home Page</button>
   </div>
 </template>
 
