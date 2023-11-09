@@ -1,30 +1,22 @@
 <template>
-  <div class="flex w-max items-center py-1">
-    <button
-      :disabled="currentPage === 1"
-      class="hover:bg-blue-400 hover:text-white p-1"
-      @click="prev"
-    >
-      prev
+  <div class="flex justify-end w-full items-center py-1 text-blue-400">
+    <button :disabled="currentPage === 1" class="px-10" @click="prev">
+      <icon-wrapper icon-code="iconamoon:arrow-left-2"></icon-wrapper>
     </button>
     <div class="flex mx-2">
       <div>{{ currentPage }}</div>
       <div class="mx-2">of</div>
       <div>{{ allPages }}</div>
     </div>
-    <button
-      :disabled="currentPage === allPages"
-      class="hover:bg-blue-400 hover:text-white p-1"
-      @click="next"
-    >
-      next
+    <button :disabled="currentPage === allPages" class="px-10" @click="next">
+      <icon-wrapper icon-code="iconamoon:arrow-right-2"></icon-wrapper>
     </button>
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { dataType } from '@/components/table-view/table-view.types'
 import { onMounted, ref, watch } from 'vue'
+import iconWrapper from '../icon-wrapper/icon-wrapper.vue'
 
 type propsType = {
   itemsCounter: number

@@ -7,19 +7,19 @@
             <tr>
               <th></th>
               <th class="p-2" v-for="(label, index) in labels" :key="index">
-                <div class="flex">
+                <div class="flex space-x-2">
                   <div v-if="!showHide[index]">
                     {{ label }}
                   </div>
-                  <button class="py-1.5 px-1" @click="toggleCol(index)">
-                    <iconify-eye> </iconify-eye>
-                  </button>
                   <table-sort
                     v-if="!!data.length"
                     :data="data"
                     :col-index="index"
                     @on-data-sorted="dataSorted"
                   ></table-sort>
+                  <button class="py-1.5 px-1" @click="toggleCol(index)">
+                    <iconify-eye> </iconify-eye>
+                  </button>
                 </div>
               </th>
             </tr>
@@ -63,13 +63,12 @@ import type { dataType } from './table-view.types'
 
 import tableSort from '@/components/table-view/table-sort.vue'
 
-const props = defineProps<propsType>()
-
 type propsType = {
-  labels: string[]
   data: dataType[][]
+  labels: string[]
   stickyCol?: boolean
 }
+const props = defineProps<propsType>()
 
 const emit = defineEmits<{
   (e: 'onDataChanged', items: dataType[][]): void

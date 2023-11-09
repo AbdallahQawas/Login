@@ -3,6 +3,7 @@
     <template #content>
       <data-table v-if="!!data.length" :data="data" :labels="labels"></data-table>
       <map-viewer></map-viewer>
+      <chart-viewer></chart-viewer>
     </template>
   </page-template>
 </template>
@@ -13,6 +14,7 @@ import pageTemplate from './page-template.vue'
 import { EdataType, type dataType } from './table-view/table-view.types'
 import dataTable from '@/components/data-table/data-table.vue'
 import mapViewer from '@/components/map-viewer/map-viewer.vue'
+import chartViewer from './chart-viewer/chart-viewer.vue'
 
 let labels = ref<string[]>([])
 let data = ref<dataType[][]>([])
@@ -31,7 +33,7 @@ function init() {
       },
 
       {
-        value: '1',
+        value: '1.2',
         type: EdataType.Number
       },
       {
@@ -58,7 +60,7 @@ function init() {
       },
 
       {
-        value: '2',
+        value: '2.5',
         type: EdataType.Number
       },
       {
@@ -85,7 +87,7 @@ function init() {
       },
 
       {
-        value: '3',
+        value: '33.5',
         type: EdataType.Number
       },
       {

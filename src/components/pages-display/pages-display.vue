@@ -1,6 +1,15 @@
 <template>
-  <div class="relative w-max">
-    show <button @click="displayList = !displayList">entries {{ list[currentIndex] }}</button>
+  <div class="relative text-blue-500">
+    <div class="flex items-center space-x-1">
+      <div>Show</div>
+      <button
+        class="bg-gray-100 px-1 flex flex-raw items-center"
+        @click="displayList = !displayList"
+      >
+        entries {{ list[currentIndex] }}
+        <icon-wrapper icon-code="iconamoon:arrow-down-2-duotone"></icon-wrapper>
+      </button>
+    </div>
     <div
       v-if="displayList"
       class="absolute top-6 right-0 z-10 flex flex-col bg-white w-full py-2 text-blue-400 rounded-md shadow-md"
@@ -19,6 +28,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
+import iconWrapper from '../icon-wrapper/icon-wrapper.vue'
 
 const emit = defineEmits<{
   (e: 'onPageIndexChanged', currentIndex: number): void

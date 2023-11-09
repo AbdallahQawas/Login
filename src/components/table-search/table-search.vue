@@ -1,7 +1,7 @@
 <template>
   <input
     v-model="search"
-    class="border border-blue-400 focus:outline-none bg-gray-100 rounded-md px-3 py-1"
+    class="border focus:outline-none bg-gray-100 rounded-md px-3 py-1"
     placeholder="Type to search"
     type="text"
   />

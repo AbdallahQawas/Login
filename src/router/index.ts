@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginForm from '../components/login-form.vue'
-import BlankPage from '../components/blank-page.vue'
 import Dashboard from '../components/page-dashboard.vue'
 import waterQuality from '../components/water-quality.vue'
 import notFound from '../views/not-found.vue'
@@ -38,11 +37,6 @@ const routes = [
     path: '/login',
     name: 'login',
     component: LoginForm
-  },
-  {
-    path: '/blank',
-    name: 'BlankPage',
-    component: BlankPage
   },
 
   {

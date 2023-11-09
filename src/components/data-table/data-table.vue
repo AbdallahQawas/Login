@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col bg-white p-4 m-4 rounded-md">
-    <div class="flex justify-between">
+  <div class="flex flex-col bg-white p-4 m-4 rounded-md space-y-1">
+    <div class="flex justify-between p-2">
       <pages-display @on-page-index-changed="pageIndexChange"></pages-display>
       <table-search @on-search-changed="searchChanged"></table-search>
     </div>
@@ -50,7 +50,7 @@ function pageChanged(page: number) {
 
 function pageIndexChange(index: number) {
   currentIndex.value = index
-  init()
+  handleData()
 }
 
 function handleData(search?: string) {
