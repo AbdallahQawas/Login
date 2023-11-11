@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-white p-4 m-4 rounded-md space-y-1">
+  <div class="flex flex-col bg-white p-4 rounded-b-md">
     <div class="flex justify-between p-2">
       <pages-display @on-page-index-changed="pageIndexChange"></pages-display>
       <table-search @on-search-changed="searchChanged"></table-search>

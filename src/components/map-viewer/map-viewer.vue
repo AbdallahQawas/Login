@@ -1,5 +1,5 @@
 <template>
-  <div class="relative p-1 bg-white m-4 rounded-md">
+  <div class="relative p-1 bg-white rounded-b-md">
     <div style="height: 400px" id="mapContainer"></div>
   </div>
 </template>

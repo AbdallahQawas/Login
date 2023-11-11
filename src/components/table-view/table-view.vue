@@ -7,8 +7,8 @@
             <tr>
               <th></th>
               <th class="p-2" v-for="(label, index) in labels" :key="index">
-                <div class="flex space-x-2">
-                  <div v-if="!showHide[index]">
+                <div class="flex">
+                  <div class="mr-2" v-if="!showHide[index]">
                     {{ label }}
                   </div>
                   <table-sort

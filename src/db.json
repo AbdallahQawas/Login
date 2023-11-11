@@ -1,0 +1,707 @@
+{
+  "data": [
+    [
+      {
+        "value": "2023-10-1T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test0",
+        "type": "String"
+      },
+
+      {
+        "value": "1.2",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-4T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test1",
+        "type": "String"
+      },
+
+      {
+        "value": "2.5",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-2T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test2",
+        "type": "String"
+      },
+
+      {
+        "value": "33.5",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test4",
+        "type": "String"
+      },
+
+      {
+        "value": "4",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test3",
+        "type": "String"
+      },
+
+      {
+        "value": "5",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test6",
+        "type": "String"
+      },
+
+      {
+        "value": "6",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-1T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test0",
+        "type": "String"
+      },
+
+      {
+        "value": "1",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-4T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test1",
+        "type": "String"
+      },
+
+      {
+        "value": "2",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-2T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test2",
+        "type": "String"
+      },
+
+      {
+        "value": "3",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test4",
+        "type": "String"
+      },
+
+      {
+        "value": "4",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test3",
+        "type": "String"
+      },
+
+      {
+        "value": "5",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test6",
+        "type": "String"
+      },
+
+      {
+        "value": "6",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test5",
+        "type": "String"
+      },
+
+      {
+        "value": "7",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test9",
+        "type": "String"
+      },
+
+      {
+        "value": "8",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test7",
+        "type": "String"
+      },
+
+      {
+        "value": "9",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test8",
+        "type": "String"
+      },
+
+      {
+        "value": "10",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+
+    [
+      {
+        "value": "2023-10-1T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test0",
+        "type": "String"
+      },
+
+      {
+        "value": "1",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-4T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test1",
+        "type": "String"
+      },
+
+      {
+        "value": "2",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-2T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test2",
+        "type": "String"
+      },
+
+      {
+        "value": "3",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test4",
+        "type": "String"
+      },
+
+      {
+        "value": "4",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test3",
+        "type": "String"
+      },
+
+      {
+        "value": "5",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test6",
+        "type": "String"
+      },
+
+      {
+        "value": "6",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test5",
+        "type": "String"
+      },
+
+      {
+        "value": "7",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test9",
+        "type": "String"
+      },
+
+      {
+        "value": "8",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test7",
+        "type": "String"
+      },
+
+      {
+        "value": "9",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ],
+    [
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "test8",
+        "type": "String"
+      },
+
+      {
+        "value": "10",
+        "type": "Number"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      },
+      {
+        "value": "2023-10-29T12:21:36.951Z",
+        "type": "Date"
+      }
+    ]
+  ]
+}

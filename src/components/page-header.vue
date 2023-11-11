@@ -2,7 +2,7 @@
   <div class="flex justify-between items-baseline text-blue-500 text-lg font-bold">
     <div class="m-3">{{ route.name }}</div>
     <div class="relative z-10">
-      <button @click="toggleDropdown" class="flex m-3 x-1 space-x-1 items-center">
+      <button @click="toggleDropdown" class="flex m-3 x-1 items-center">
         <span class="py-1"><iconifyProfile class="h-5 w-5"></iconifyProfile> </span>
         <div>{{ tenantName }}</div>
         <heroChevronRight />
@@ -23,7 +23,8 @@ import { useRoute } from 'vue-router'
 import { ref } from 'vue'
 
 const isOpen = ref(false)
-
+const route = useRoute()
+const router = useRouter()
 const toggleDropdown = () => {
   isOpen.value = !isOpen.value
 }
@@ -31,8 +32,6 @@ const toggleDropdown = () => {
 type propsType = {
   tenantName: string
 }
-const route = useRoute()
-const router = useRouter()
 
 const props = defineProps<propsType>()
 
