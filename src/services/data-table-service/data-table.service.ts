@@ -16,6 +16,10 @@ export const useDataTableStore = defineStore('dataTable', {
     },
     getDataTable() {
       return this.$state.dataTable
+    },
+    async loadNextData() {
+      const temp = await dataTableAPI.getDataTable()
+      this.$state.dataTable = [...this.$state.dataTable, ...temp.data]
     }
   }
 })

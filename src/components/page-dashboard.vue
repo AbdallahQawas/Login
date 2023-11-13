@@ -2,7 +2,12 @@
   <page-template>
     <template #content>
       <component-wrapper title="Table">
-        <data-table v-if="!!data.length" :data="data" :labels="labels"></data-table>
+        <data-table
+          v-if="!!data.length"
+          :data="data"
+          :labels="labels"
+          @on-next-data-load="loadNextData"
+        ></data-table>
       </component-wrapper>
       <component-wrapper title="Map">
         <map-viewer></map-viewer>
@@ -33,6 +38,11 @@ async function init() {
   await dataTableStore.loadDataTable()
 
   labels.value = ['Time', 'Label', 'Value', 'Time', 'Label', 'Value']
+  data.value = dataTableStore.getDataTable()
+}
+
+async function loadNextData() {
+  await dataTableStore.loadNextData()
   data.value = dataTableStore.getDataTable()
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-end w-full items-center py-1 text-blue-400">
+  <div class="flex w-full py-1 text-blue-400">
     <button :disabled="currentPage === 1" class="px-10" @click="prev">
       <icon-wrapper icon-code="iconamoon:arrow-left-2"></icon-wrapper>
     </button>
@@ -43,7 +43,7 @@ function next() {
 }
 
 watch(
-  () => props.itemsCounter,
+  () => [props.itemsCounter, props.pagesNumber],
   () => {
     init()
     emit('onPageChanged', currentPage.value)

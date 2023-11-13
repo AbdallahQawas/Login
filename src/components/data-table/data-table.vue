@@ -4,18 +4,28 @@
       <pages-display @on-page-index-changed="pageIndexChange"></pages-display>
       <table-search @on-search-changed="searchChanged"></table-search>
     </div>
-    <table-view
-      v-if="!!dataToView.length"
-      @on-data-changed="dataChanged"
-      :labels="labels"
-      :data="dataToView"
-      :sticky-col="stickyCol"
-    ></table-view>
-    <table-pagination
-      :pages-number="data.length"
-      :items-counter="currentIndex"
-      @on-page-changed="pageChanged"
-    ></table-pagination>
+    <div>
+      <table-view
+        v-if="!!dataToView.length"
+        @on-data-changed="dataChanged"
+        :labels="labels"
+        :data="dataToView"
+        :sticky-col="stickyCol"
+      ></table-view>
+    </div>
+    <div class="flex flex-row p-4 justify-between">
+      <div class="flex flex-row text-blue-500">
+        <span class="p-1"> {{ data.length }} Entries - </span>
+        <load-next @on-load-next-changed="loadNextData"> </load-next>
+      </div>
+      <div>
+        <table-pagination
+          :pages-number="data.length"
+          :items-counter="currentIndex"
+          @on-page-changed="pageChanged"
+        ></table-pagination>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -26,6 +36,7 @@ import type { dataType } from '../table-view/table-view.types'
 import { onMounted, ref } from 'vue'
 import pagesDisplay from '@/components/pages-display/pages-display.vue'
 import tableSearch from '@/components/table-search/table-search.vue'
+import loadNext from '@/components/load-next/load-next.vue'
 
 const props = defineProps<propsType>()
 
@@ -35,9 +46,17 @@ type propsType = {
   stickyCol?: boolean
 }
 
+const emit = defineEmits<{
+  (e: 'onNextDataLoad'): void
+}>()
+
 let dataToView = ref<dataType[][]>([])
 let currentPage = ref(1)
 let currentIndex = ref(5)
+
+function loadNextData() {
+  emit('onNextDataLoad')
+}
 
 function dataChanged(data: dataType[][]) {
   dataToView.value = data

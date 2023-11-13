@@ -1,7 +1,10 @@
 <template>
-  <div class="h-full">
-    <div class="bg-sky-500 h-full flex flex-col px-6 space-y-1">
-      <div class="w-48" v-for="(page, index) in pages" :key="index">
+  <div class="h-full w-screen relative lg:w-60">
+    <div class="bg-sky-500 text-white w-full lg:hidden" @click="hideMenu">
+      <icon-wrapper class="h-7 w-7" icon-code="ic:round-close"></icon-wrapper>
+    </div>
+    <div class="bg-sky-500 items-center h-full w-full lg:w-60 flex flex-col px-6 space-y-1">
+      <div class="w-full" v-for="(page, index) in pages" :key="index">
         <button
           @click="reroute(page.name)"
           v-if="!page.subPage"
@@ -42,6 +45,15 @@ import iconifyAnomalies from '@/icons/iconify-anomalies.vue'
 import iconifyOnDemand from '@/icons/iconify-on-demand.vue'
 import iconifyIncidents from '@/icons/iconify-incidents.vue'
 import iconifyOctopo from '@/icons/iconify-octopo.vue'
+import iconWrapper from './icon-wrapper/icon-wrapper.vue'
+
+const emit = defineEmits<{
+  (e: 'toggleMenu'): void
+}>()
+
+function hideMenu() {
+  emit('toggleMenu')
+}
 
 function isComponent(name: string) {
   let temp = {
