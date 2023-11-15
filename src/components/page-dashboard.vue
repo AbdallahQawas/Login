@@ -2,18 +2,46 @@
   <page-template>
     <template #content>
       <component-wrapper title="Table">
-        <data-table
-          v-if="!!data.length"
-          :data="data"
-          :labels="labels"
-          @on-next-data-load="loadNextData"
-        ></data-table>
+        <template #slot1>
+          <div></div>
+        </template>
+        <template #slot2>
+          <data-table
+            v-if="!!data.length"
+            :data="data"
+            :labels="labels"
+            @on-next-data-load="loadNextData"
+          ></data-table>
+        </template>
       </component-wrapper>
+
       <component-wrapper title="Map">
-        <map-viewer></map-viewer>
+        <template #slot1>
+          <div></div>
+        </template>
+        <template #slot2>
+          <map-viewer></map-viewer>
+        </template>
       </component-wrapper>
+
       <component-wrapper title="Chart">
-        <chart-viewer v-if="!!config?.data?.datasets?.length" :chart-config="config"></chart-viewer>
+        <template #slot1>
+          <button @click="flag = !flag">
+            {{ flag ? 'go to table' : 'go to chart' }}
+          </button>
+        </template>
+        <template #slot2>
+          <chart-viewer
+            v-if="!!config?.data?.datasets?.length && !flag"
+            :chart-config="config"
+          ></chart-viewer>
+          <data-table
+            v-if="!!data.length && flag"
+            :data="data"
+            :labels="labels"
+            @on-next-data-load="loadNextData"
+          ></data-table>
+        </template>
       </component-wrapper>
     </template>
   </page-template>
@@ -36,6 +64,7 @@ let labels = ref<string[]>([])
 let data = ref<dataType[][]>([])
 let dataForChart = ref<Object>({})
 let config = ref<ChartConfiguration>({} as ChartConfiguration)
+let flag = ref<boolean>(false)
 
 async function init() {
   await dataTableStore.loadDataTable()
