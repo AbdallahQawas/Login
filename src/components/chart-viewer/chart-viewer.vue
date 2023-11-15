@@ -4,8 +4,15 @@
   </div>
 </template>
 <script lang="ts" setup>
-import Chart from 'chart.js/auto'
+import Chart, { type ChartConfiguration } from 'chart.js/auto'
 import { onMounted } from 'vue'
+import 'chartjs-adapter-date-fns'
+
+type propsType = {
+  chartConfig: ChartConfiguration
+}
+
+const props = defineProps<propsType>()
 
 function init() {
   const ctx = document.getElementById('chartContainer')
@@ -13,58 +20,7 @@ function init() {
   ctx?.appendChild(newCanves)
 
   if (ctx) {
-    const chart = new Chart(newCanves, {
-      type: 'line',
-      data: {
-        datasets: [
-          {
-            label: 'weekDays',
-            data: [
-              {
-                x: 'sun',
-                y: 1
-              },
-              {
-                x: 'mon',
-                y: 2
-              },
-              {
-                x: 'tues',
-                y: 3
-              },
-              {
-                x: 'wed',
-                y: 4
-              }
-            ],
-            borderWidth: 1
-          },
-          {
-            label: 'weekDays2',
-            data: [
-              {
-                x: 'sun',
-                y: 6
-              },
-              {
-                x: 'mon',
-                y: 7
-              },
-              {
-                x: 'tues',
-                y: 8
-              },
-              {
-                x: 'wed',
-                y: 9
-              }
-            ],
-            borderWidth: 1
-          }
-        ]
-      },
-      options: {}
-    })
+    const chart = new Chart(newCanves, props.chartConfig)
   }
 }
 
