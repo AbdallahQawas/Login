@@ -1,0 +1,266 @@
+{
+  "type": "FeatureCollection",
+  "name": "Tu_wInstrumentoMedicion",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "icon": "",
+        "marker-color": "red",
+        "marker-size": "large",
+
+        "Name": "PM 1",
+        "CAUDAL": 0,
+        "CESTE": -73.525023,
+        "CNORTE": 5.426954,
+        "COTARASANTE": 3090.0,
+        "DIAMETRO": "0",
+        "DIRECCION": null,
+        "ESTADOFISICO": "Bueno",
+        "FECHAINSTALACION": null,
+        "Field_1": "PATIM345",
+        "GlobalID": "{4B15C742-120D-4842-8900-292EDDEDEEB1}",
+        "IDSIG": "PATIM345",
+        "MARCA": null,
+        "MDFECHACARGUE": "9/8/2012",
+        "OBSERVACIONES": "Anotacion: PFP-01",
+        "ROTACIONSIMBOLO": 274.1849,
+        "SUBTYPE": "IMPunto Presion Fijo",
+        "TIPOSISTEMA": "Tratada",
+        "USUARIO": "Proactiva Aguas de Tunja - William Orlando Salamanca Aviila",
+        "VINCULOSID": "PATIM345",
+        "ZONASERVICIO": null,
+        "created_date": "21/11/2019 17:35:04",
+        "created_user": "JHERRERAT",
+        "last_edited_date": "20/10/2022 20:57:03",
+        "last_edited_user": "US_EDICION2_TUNJA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.19360839560261, 32.51780590643118]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn3cTxCtKhummuiLsphFheLCYsy6SR9pxH7Q",
+        "marker-symbol": "marker-png",
+        "marker-size": 0.2,
+        "Name": "PM 2",
+        "CAUDAL": 0,
+        "CESTE": -73.375215,
+        "CNORTE": 5.512748,
+        "COTARASANTE": 2851.377,
+        "DIAMETRO": "0",
+        "DIRECCION": "calle 3a # 17 -14",
+        "ESTADOFISICO": "Bueno",
+        "FECHAINSTALACION": null,
+        "Field_1": "PATIM219",
+        "GlobalID": "{9A3E5308-2ECF-4649-9A43-E39EE8DEF7A6}",
+        "IDSIG": "PATIM219",
+        "MARCA": null,
+        "MDFECHACARGUE": "9/8/2012",
+        "OBSERVACIONES": "Anotacion: PFPO 24.3",
+        "ROTACIONSIMBOLO": 79.666,
+        "SUBTYPE": "IMPunto Presion Fijo",
+        "TIPOSISTEMA": "Tratada",
+        "USUARIO": "Proactiva Aguas de Tunja - William Orlando Salamanca Aviila",
+        "VINCULOSID": "PATIM219",
+        "ZONASERVICIO": 24,
+        "created_date": "21/11/2019 17:35:04",
+        "created_user": "JHERRERAT",
+        "last_edited_date": "20/10/2022 20:57:14",
+        "last_edited_user": "US_EDICION2_TUNJA"
+      },
+      "geometry": {
+        "type": "Point",
+
+        "coordinates": [34.19360839560261, 32.41780590643118]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "im description",
+        "marker-symbol": "airport",
+        "Name": "PM 3",
+        "CAUDAL": 0,
+        "CESTE": -73.387727,
+        "CNORTE": 5.485361,
+        "COTARASANTE": 2917.0,
+        "DIAMETRO": "0",
+        "DIRECCION": null,
+        "ESTADOFISICO": "Bueno",
+        "FECHAINSTALACION": null,
+        "Field_1": "PATIM342",
+        "GlobalID": "{F9EC5055-8169-42DC-8A00-A167395D5515}",
+        "IDSIG": "PATIM342",
+        "MARCA": null,
+        "MDFECHACARGUE": "9/8/2012",
+        "OBSERVACIONES": "Anotacion: Punto de presion fijo3/4\" HG",
+        "ROTACIONSIMBOLO": 180.2551,
+        "SUBTYPE": "IMPunto Presion Fijo",
+        "TIPOSISTEMA": "Tratada",
+        "USUARIO": "Proactiva Aguas de Tunja - William Orlando Salamanca Aviila",
+        "VINCULOSID": "PATIM342",
+        "ZONASERVICIO": null,
+        "created_date": "21/11/2019 17:35:04",
+        "created_user": "JHERRERAT",
+        "last_edited_date": "20/10/2022 20:57:20",
+        "last_edited_user": "US_EDICION2_TUNJA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.19360839560261, 32.31780590643118]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "fl-red-marker",
+        "Name": "PM 4",
+        "CAUDAL": 0,
+        "CESTE": -73.516364,
+        "CNORTE": 5.427938,
+        "COTARASANTE": 3068.0,
+        "DIAMETRO": "0",
+        "DIRECCION": null,
+        "ESTADOFISICO": "Bueno",
+        "FECHAINSTALACION": null,
+        "Field_1": "PATIM343",
+        "GlobalID": "{1827F1BD-5200-43D3-A470-72B9C077A187}",
+        "IDSIG": "PATIM343",
+        "MARCA": null,
+        "MDFECHACARGUE": "9/8/2012",
+        "OBSERVACIONES": "Anotacion: PFP-03",
+        "ROTACIONSIMBOLO": 265.9796,
+        "SUBTYPE": "IMPunto Presion Fijo",
+        "TIPOSISTEMA": "Tratada",
+        "USUARIO": "Proactiva Aguas de Tunja - William Orlando Salamanca Aviila",
+        "VINCULOSID": "PATIM343",
+        "ZONASERVICIO": null,
+        "created_date": "21/11/2019 17:35:04",
+        "created_user": "JHERRERAT",
+        "last_edited_date": "20/10/2022 20:57:20",
+        "last_edited_user": "US_EDICION2_TUNJA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.19360839560261, 32.61780590643118]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "fl-green-marker",
+        "Name": "PM 5",
+        "CAUDAL": 0,
+        "CESTE": -73.524831,
+        "CNORTE": 5.426952,
+        "COTARASANTE": 3086.0,
+        "DIAMETRO": "0",
+        "DIRECCION": null,
+        "ESTADOFISICO": "Bueno",
+        "FECHAINSTALACION": null,
+        "Field_1": "PATIM344",
+        "GlobalID": "{9BBB6AE6-1FDD-49F6-AE8B-CD26C8E0DD00}",
+        "IDSIG": "PATIM344",
+        "MARCA": null,
+        "MDFECHACARGUE": "9/8/2012",
+        "OBSERVACIONES": "Anotacion: PFP-02",
+        "ROTACIONSIMBOLO": 272.9185,
+        "SUBTYPE": "IMPunto Presion Fijo",
+        "TIPOSISTEMA": "Tratada",
+        "USUARIO": "Proactiva Aguas de Tunja - William Orlando Salamanca Aviila",
+        "VINCULOSID": "PATIM344",
+        "ZONASERVICIO": null,
+        "created_date": "21/11/2019 17:35:04",
+        "created_user": "JHERRERAT",
+        "last_edited_date": "20/10/2022 20:57:20",
+        "last_edited_user": "US_EDICION2_TUNJA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.19360839560261, 32.71780590643118]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-symbol": "fl-yellow-marker",
+        "Name": "FM 1",
+        "CAUDAL": 0,
+        "CESTE": -73.539083,
+        "CNORTE": 5.420017,
+        "COTARASANTE": 3221.0,
+        "DIAMETRO": "0",
+        "DIRECCION": null,
+        "ESTADOFISICO": "Bueno",
+        "FECHAINSTALACION": null,
+        "Field_1": "PATIM346",
+        "GlobalID": "{0C722248-A567-437A-A3D6-3BDF8C3E7589}",
+        "IDSIG": "PATIM346",
+        "MARCA": null,
+        "MDFECHACARGUE": "9/8/2012",
+        "OBSERVACIONES": "Teatinos. Anotacion: MCR-017, K0+129.032",
+        "ROTACIONSIMBOLO": 280.299,
+        "SUBTYPE": "IMMecanico",
+        "TIPOSISTEMA": "Tratada",
+        "USUARIO": "Proactiva Aguas de Tunja - Lissa Maria Ruiz Orjuela",
+        "VINCULOSID": "PATIM346",
+        "ZONASERVICIO": null,
+        "created_date": "21/11/2019 17:35:04",
+        "created_user": "JHERRERAT",
+        "last_edited_date": "20/10/2022 20:57:20",
+        "last_edited_user": "US_EDICION2_TUNJA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.19360839560261, 32.21780590643118]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#3bb2d0",
+        "marker-size": "large",
+        "marker-symbol": "fl-blue-900-marker",
+        "Name": "FM 2",
+        "CAUDAL": 0,
+        "CESTE": -73.542348,
+        "CNORTE": 5.420432,
+        "COTARASANTE": 3270.0,
+        "DIAMETRO": "20\"",
+        "DIRECCION": "TEATINOS, CASETA",
+        "ESTADOFISICO": "Bueno",
+        "FECHAINSTALACION": "24/2/2014",
+        "Field_1": "PATIM442",
+        "GlobalID": "{36FC66DC-9AAA-4C98-BADF-ADC980D20883}",
+        "IDSIG": "PATIM442",
+        "MARCA": "NIVUS",
+        "MDFECHACARGUE": "16/3/2021",
+        "OBSERVACIONES": "Serial No: 2051NF6100 CAUDALIMETRO CON SONDAS Y TRANSDUCTORES. TEATINOS.",
+        "ROTACIONSIMBOLO": 0.0,
+        "SUBTYPE": "IMUltrasonico",
+        "TIPOSISTEMA": "Tratada",
+        "USUARIO": "Proactiva Aguas de Tunja - William Orlando Salamanca Aviila",
+        "VINCULOSID": "PATIM442",
+        "ZONASERVICIO": null,
+        "created_date": "21/11/2019 17:35:04",
+        "created_user": "JHERRERAT",
+        "last_edited_date": "20/10/2022 20:57:23",
+        "last_edited_user": "US_EDICION2_TUNJA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.19360839560261, 32.11780590643118]
+      }
+    }
+  ]
+}

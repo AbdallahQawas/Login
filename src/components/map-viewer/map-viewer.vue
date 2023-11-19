@@ -5,24 +5,43 @@
 </template>
 
 <script lang="ts" setup>
-import mapboxgl from 'mapbox-gl'
-import { onMounted } from 'vue'
+import mapboxgl from "mapbox-gl";
+import { onMounted } from "vue";
+import type { IMapLayer } from "@/services/map-service/map-types";
+
+type propsType = {
+  layers: IMapLayer[];
+};
+
+const props = defineProps<propsType>();
+
+let map: mapboxgl.Map;
 
 mapboxgl.accessToken =
-  'pk.eyJ1IjoiaGlzaGFtYWJkYWxmYXRhaDIyIiwiYSI6ImNsbzZ4bzg2NDAwaG8yaXFnZGphbDJseHYifQ.vQ4nhuHhmRQYYBnT16Jsgg'
+  "pk.eyJ1IjoiaGlzaGFtYWJkYWxmYXRhaDIyIiwiYSI6ImNsbzZ4bzg2NDAwaG8yaXFnZGphbDJseHYifQ.vQ4nhuHhmRQYYBnT16Jsgg";
 
-function init() {
-  const map = new mapboxgl.Map({
-    container: 'mapContainer',
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [35.19360839560261, 32.51780590643118],
-    zoom: 14
-  })
+function initMapBox() {
+  map.on("load", () => {
+    props.layers.forEach((layer) => {
+      map.addSource(layer.source.id, layer.source.details);
+      map.addLayer(layer.details);
+    });
+  });
 }
 
-onMounted(init)
+function init() {
+  map = new mapboxgl.Map({
+    container: "mapContainer",
+    style: "mapbox://styles/mapbox/streets-v12",
+    center: [35.19360839560261, 32.51780590643118],
+    zoom: 9,
+  });
+  initMapBox();
+}
+
+onMounted(init);
 </script>
 
 <style scoped>
-@import 'https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css';
+@import "https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css";
 </style>

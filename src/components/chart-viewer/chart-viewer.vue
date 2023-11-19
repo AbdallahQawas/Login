@@ -1,5 +1,5 @@
 <template>
-  <div class="p-2 bg-white rounded-b-md">
+  <div class="p-2 w-full h-full">
     <div class="w-11/12 h-5/6" id="chartContainer"></div>
   </div>
 </template>
