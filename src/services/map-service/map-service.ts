@@ -27,7 +27,7 @@ function MapService() {
             type: "circle",
             source: "layer" + index,
             paint: {
-              "circle-radius": 5,
+              "circle-radius": 6,
               "circle-color": [
                 "match",
                 ["get", "color"],

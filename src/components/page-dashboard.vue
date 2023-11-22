@@ -20,7 +20,7 @@
           <div></div>
         </template>
         <template #slot2>
-          <map-viewer :layers="layers"></map-viewer>
+          <map-viewer v-if="!!layers.length" :layers="layers"></map-viewer>
         </template>
       </component-wrapper>
 

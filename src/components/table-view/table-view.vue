@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="text-blue-500 rounded-md border border-blue-500 max-h-96 overflow-auto">
+    <div
+      class="text-blue-500 rounded-md border border-blue-500 max-h-96 overflow-auto"
+    >
       <div class="w-full">
         <table class="w-full">
           <thead class="sticky top-0 bg-white">
@@ -56,40 +58,40 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import iconifyEye from '../../icons/iconify-eye.vue'
-import dataView from '../data-view.vue'
-import type { dataType } from './table-view.types'
+import { ref } from "vue";
+import iconifyEye from "../../icons/iconify-eye.vue";
+import dataView from "../data-view.vue";
+import type { dataType } from "./table-view.types";
 
-import tableSort from '@/components/table-view/table-sort.vue'
+import tableSort from "@/components/table-view/table-sort.vue";
 
 type propsType = {
-  data: dataType[][]
-  labels: string[]
-  stickyCol?: boolean
-}
-const props = defineProps<propsType>()
+  data: dataType[][];
+  labels: string[];
+  stickyCol?: boolean;
+};
+const props = defineProps<propsType>();
 
 const emit = defineEmits<{
-  (e: 'onDataChanged', items: dataType[][]): void
-}>()
+  (e: "onDataChanged", items: dataType[][]): void;
+}>();
 
-type showHideType = { [key: number]: boolean }
-let showHide = ref<showHideType>([])
+type showHideType = { [key: number]: boolean };
+let showHide = ref<showHideType>([]);
 
 function toggleCol(index: number) {
-  showHide.value[index] = !showHide.value[index]
+  showHide.value[index] = !showHide.value[index];
 }
 
 function checkBoxClicked(index: number) {
-  alert(`row index is ${index}`)
+  alert(`row index is ${index}`);
 }
 
 function cellPosition(row: number, col: number) {
-  alert(`cell position is (${row},${col})`)
+  alert(`cell position is (${row},${col})`);
 }
 
 function dataSorted(sortedData: dataType[][]) {
-  emit('onDataChanged', sortedData)
+  emit("onDataChanged", sortedData);
 }
 </script>
