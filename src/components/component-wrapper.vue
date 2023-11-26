@@ -6,7 +6,7 @@
       </div>
       <div class="flex flex-row items-center">
         <button
-          class="text-gray-500 hover:text-blue-500"
+          class="text-gray-500 hover:text-blue-600"
           @click="expandClicked"
           v-if="!expand"
         >

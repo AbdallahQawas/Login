@@ -1,6 +1,9 @@
 <template>
   <page-template>
     <template #content>
+      <div class="ml-2">
+        <fl-card v-if="!!data.length" :data="dataClass"></fl-card>
+      </div>
       <component-wrapper title="Table">
         <template #slot1>
           <div></div>
@@ -66,6 +69,8 @@ import componentWrapper from "./component-wrapper.vue";
 import type { ChartConfiguration } from "chart.js/auto";
 import MapService from "@/services/map-service/map-service";
 import type { IMapLayer } from "@/services/map-service/map-types";
+import flCard from "@/components/fl-card/fl-card.vue";
+import { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
 
 const dataTableStore = useDataTableStore();
 const mapService = MapService();
@@ -76,6 +81,7 @@ let dataForChart = ref<Object>({});
 let config = ref<ChartConfiguration>({} as ChartConfiguration);
 let flag = ref<boolean>(false);
 let layers = ref<IMapLayer[]>([]);
+let dataClass = ref<DataTableClass>(new DataTableClass());
 
 async function init() {
   await dataTableStore.loadDataTable();
@@ -84,6 +90,8 @@ async function init() {
   data.value = dataTableStore.getDataTable().data;
 
   dataForChart.value = dataTableStore.getDataTable().getDataForChart();
+
+  dataClass.value = dataTableStore.getDataTable();
 
   config.value = {
     type: "line",
