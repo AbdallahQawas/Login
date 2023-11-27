@@ -1,6 +1,6 @@
 <template>
   <div class="m-4">
-    <div class="inline-flex w-full justify-between bg-gray-100 p-4">
+    <div class="flex w-full justify-between bg-gray-100 p-4">
       <div class="font-bold text-blue-600">
         {{ title }}
       </div>
