@@ -2,57 +2,63 @@
   <page-template>
     <template #content>
       <div class="ml-2">
-        <fl-card v-if="!!data.length" :data="dataClass"></fl-card>
+        <card-grids></card-grids>
       </div>
-      <component-wrapper title="Table">
-        <template #slot1>
-          <div></div>
-        </template>
-        <template #slot2>
-          <data-table
-            v-if="!!data.length"
-            :data="data"
-            :labels="labels"
-            @on-next-data-load="loadNextData"
-          ></data-table>
-        </template>
-      </component-wrapper>
-
-      <component-wrapper title="Map" :expand="true">
-        <template #slot1>
-          <div></div>
-        </template>
-        <template #slot2>
-          <map-viewer v-if="!!layers.length" :layers="layers"></map-viewer>
-        </template>
-      </component-wrapper>
-
-      <component-wrapper title="Chart">
-        <template #slot1>
-          <div class="flex">
-            <button @click="flag = !flag">
-              {{ flag ? "go to chart" : "go to table" }}
-            </button>
-          </div>
-        </template>
-        <template #slot2>
-          <div>
-            <div class="mx-auto">
-              <chart-viewer
-                class="w-full h-full"
-                v-if="!!config?.data?.datasets?.length && !flag"
-                :chart-config="config"
-              ></chart-viewer>
-              <data-table
-                v-if="!!data.length && flag"
-                :data="data"
-                :labels="labels"
-                @on-next-data-load="loadNextData"
-              ></data-table>
-            </div>
-          </div>
-        </template>
-      </component-wrapper>
+      <div class="m-4">
+        <component-wrapper title="Table">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <data-table
+              v-if="!!data.length"
+              :data="data"
+              :labels="labels"
+              @on-next-data-load="loadNextData"
+            ></data-table>
+          </template>
+        </component-wrapper>
+      </div>
+      <div class="m-4">
+        <component-wrapper title="Map" :expand="true">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <map-viewer v-if="!!layers.length" :layers="layers"></map-viewer>
+          </template>
+        </component-wrapper>
+      </div>
+      <div class="m-4">
+        <chart-tab
+          v-if="displaySwitch"
+          @on-tab-opened="() => (displaySwitch = !displaySwitch)"
+        ></chart-tab>
+        <chart-grid
+          v-if="!displaySwitch"
+          @on-grid-opened="() => (displaySwitch = !displaySwitch)"
+        ></chart-grid>
+      </div>
+      <div class="m-4">
+        <component-wrapper title="Envelop Chart">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <envelop-chart></envelop-chart>
+          </template>
+        </component-wrapper>
+      </div>
+      <div class="m-4">
+        <component-wrapper title="Stacked Chart">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <stacked-bar></stacked-bar>
+          </template>
+        </component-wrapper>
+      </div>
     </template>
   </page-template>
 </template>
@@ -63,14 +69,17 @@ import pageTemplate from "./page-template.vue";
 import { type dataType } from "./table-view/table-view.types";
 import dataTable from "@/components/data-table/data-table.vue";
 import mapViewer from "@/components/map-viewer/map-viewer.vue";
-import chartViewer from "./chart-viewer/chart-viewer.vue";
 import { useDataTableStore } from "@/services/data-table-service/data-table.service";
 import componentWrapper from "./component-wrapper.vue";
 import type { ChartConfiguration } from "chart.js/auto";
 import MapService from "@/services/map-service/map-service";
 import type { IMapLayer } from "@/services/map-service/map-types";
-import flCard from "@/components/fl-card/fl-card.vue";
+import cardGrids from "./card-grids/card-grids.vue";
+import chartTab from "./chart-tab/chart-tab.vue";
+import chartGrid from "./chart-grid/chart-grid.vue";
 import { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
+import envelopChart from "./envelop-chart/envelop-chart.vue";
+import stackedBar from "./stacked-bar/stacked-bar.vue";
 
 const dataTableStore = useDataTableStore();
 const mapService = MapService();
@@ -79,7 +88,9 @@ let labels = ref<string[]>([]);
 let data = ref<dataType[][]>([]);
 let dataForChart = ref<Object>({});
 let config = ref<ChartConfiguration>({} as ChartConfiguration);
-let flag = ref<boolean>(false);
+
+let displaySwitch = ref(true);
+
 let layers = ref<IMapLayer[]>([]);
 let dataClass = ref<DataTableClass>(new DataTableClass());
 

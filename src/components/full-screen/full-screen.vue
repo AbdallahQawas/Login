@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col fixed inset-0 z-10 h-screem w-screen bg-white text-blue-500"
+    class="flex flex-col fixed inset-0 z-10 h-screen w-screen bg-white text-blue-500"
   >
     <button @click="closeClicked" class="p-10 flex justify-end">
       <icon-wrapper class="w-7 h-7" icon-code="iconamoon:close"></icon-wrapper>
