@@ -80,9 +80,11 @@ import chartGrid from "./chart-grid/chart-grid.vue";
 import { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
 import envelopChart from "./envelop-chart/envelop-chart.vue";
 import stackedBar from "./stacked-bar/stacked-bar.vue";
+import ConsoleService from "@/services/console-service/console-service";
 
 const dataTableStore = useDataTableStore();
 const mapService = MapService();
+const consoleService = ConsoleService();
 
 let labels = ref<string[]>([]);
 let data = ref<dataType[][]>([]);
@@ -95,7 +97,11 @@ let layers = ref<IMapLayer[]>([]);
 let dataClass = ref<DataTableClass>(new DataTableClass());
 
 async function init() {
-  await dataTableStore.loadDataTable();
+  try {
+    await dataTableStore.loadDataTable();
+  } catch (error) {
+    consoleService.error(error);
+  }
 
   labels.value = ["Time", "Label", "Value"];
   data.value = dataTableStore.getDataTable().data;
