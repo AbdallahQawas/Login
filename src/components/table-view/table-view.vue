@@ -60,7 +60,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import iconifyEye from "../../icons/iconify-eye.vue";
-import dataView from "../data-view.vue";
+import dataView from "@/components/data-view/data-view.vue";
 import type { dataType } from "./table-view.types";
 
 import tableSort from "@/components/table-view/table-sort.vue";

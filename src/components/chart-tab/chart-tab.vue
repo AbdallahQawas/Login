@@ -43,7 +43,7 @@ import { onMounted, ref } from "vue";
 import { type dataType } from "@/components/table-view/table-view.types";
 import dataTable from "@/components/data-table/data-table.vue";
 import { useDataTableStore } from "@/services/data-table-service/data-table.service";
-import componentWrapper from "@/components/component-wrapper.vue";
+import componentWrapper from "@/components/component-wrapper/component-wrapper.vue";
 import type { ChartConfiguration } from "chart.js/auto";
 import chartViewer from "../chart-viewer/chart-viewer.vue";
 import iconWrapper from "../icon-wrapper/icon-wrapper.vue";

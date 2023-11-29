@@ -27,11 +27,11 @@
 </template>
 
 <script lang="ts" setup>
-import iconifyProfile from "../icons/iconify-profile.vue";
+import iconifyProfile from "@/icons/iconify-profile.vue";
 import heroChevronRight from "@/icons/hero-chevron-right.vue";
 import { useRouter } from "vue-router";
 import { useRoute } from "vue-router";
-import iconWrapper from "./icon-wrapper/icon-wrapper.vue";
+import iconWrapper from "@/components/icon-wrapper/icon-wrapper.vue";
 
 import { ref } from "vue";
 

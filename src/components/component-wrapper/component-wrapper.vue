@@ -30,7 +30,7 @@
 
 <script lang="ts" setup>
 import fullScreen from "@/components/full-screen/full-screen.vue";
-import iconWrapper from "./icon-wrapper/icon-wrapper.vue";
+import iconWrapper from "@/components/icon-wrapper/icon-wrapper.vue";
 import { ref } from "vue";
 
 type propsType = {

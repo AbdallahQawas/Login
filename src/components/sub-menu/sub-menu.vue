@@ -19,8 +19,8 @@
 </template>
 
 <script setup lang="ts">
-import { type pageType } from "./page-menu.vue";
-import HeroChevronRight from "../icons/hero-chevron-right.vue";
+import { type pageType } from "@/components/page-menu/page-menu.vue";
+import HeroChevronRight from "@/icons/hero-chevron-right.vue";
 import iconifyWater from "@/icons/iconify-water.vue";
 import iconifyZones from "@/icons/iconify-zones.vue";
 import iconifyMonitoring from "@/icons/iconify-monitoring.vue";

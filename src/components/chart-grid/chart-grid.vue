@@ -33,7 +33,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
 import { useDataTableStore } from "@/services/data-table-service/data-table.service";
-import componentWrapper from "@/components/component-wrapper.vue";
+import componentWrapper from "@/components/component-wrapper/component-wrapper.vue";
 import type { ChartConfiguration } from "chart.js/auto";
 import chartViewer from "../chart-viewer/chart-viewer.vue";
 import iconWrapper from "../icon-wrapper/icon-wrapper.vue";

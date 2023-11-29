@@ -34,7 +34,7 @@ function reroute(routeName: string) {
 const router = useRouter();
 import { useRouter } from "vue-router";
 import { ref } from "vue";
-import subMenu from "./sub-menu.vue";
+import subMenu from "@/components/sub-menu/sub-menu.vue";
 import iconifyDashboard from "@/icons/iconify-dashboard.vue";
 import iconifyWater from "@/icons/iconify-water.vue";
 import iconifyControlCenter from "@/icons/iconify-control-center.vue";
@@ -50,7 +50,7 @@ import iconifyAnomalies from "@/icons/iconify-anomalies.vue";
 import iconifyOnDemand from "@/icons/iconify-on-demand.vue";
 import iconifyIncidents from "@/icons/iconify-incidents.vue";
 import iconifyOctopo from "@/icons/iconify-octopo.vue";
-import iconWrapper from "./icon-wrapper/icon-wrapper.vue";
+import iconWrapper from "@/components/icon-wrapper/icon-wrapper.vue";
 
 const emit = defineEmits<{
   (e: "toggleMenu"): void;

@@ -19,8 +19,8 @@
 </template>
 
 <script setup lang="ts">
-import pageMenu from "./page-menu.vue";
-import pageHeader from "./page-header.vue";
+import pageMenu from "@/components/page-menu/page-menu.vue";
+import pageHeader from "@/components/page-header/page-header.vue";
 import { ref } from "vue";
 
 let showMenu = ref<boolean>(true);

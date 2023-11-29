@@ -68,23 +68,23 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import pageTemplate from "./page-template.vue";
-import { type dataType } from "./table-view/table-view.types";
+import pageTemplate from "@/components/page-template/page-template.vue";
+import { type dataType } from "@/components/table-view/table-view.types";
 import dataTable from "@/components/data-table/data-table.vue";
 import mapViewer from "@/components/map-viewer/map-viewer.vue";
 import { useDataTableStore } from "@/services/data-table-service/data-table.service";
-import componentWrapper from "./component-wrapper.vue";
+import componentWrapper from "@/components/component-wrapper/component-wrapper.vue";
 import type { ChartConfiguration } from "chart.js/auto";
 import MapService from "@/services/map-service/map-service";
 import type { IMapLayer } from "@/services/map-service/map-types";
-import cardGrids from "./card-grids/card-grids.vue";
-import chartTab from "./chart-tab/chart-tab.vue";
-import chartGrid from "./chart-grid/chart-grid.vue";
+import cardGrids from "@/components/card-grids/card-grids.vue";
+import chartTab from "@/components/chart-tab/chart-tab.vue";
+import chartGrid from "@/components/chart-grid/chart-grid.vue";
 import { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
-import envelopChart from "./envelop-chart/envelop-chart.vue";
-import stackedBar from "./stacked-bar/stacked-bar.vue";
+import envelopChart from "@/components/envelop-chart/envelop-chart.vue";
+import stackedBar from "@/components/stacked-bar/stacked-bar.vue";
 import ConsoleService from "@/services/console-service/console-service";
-import copyLink from "./copy-link/copy-link.vue";
+import copyLink from "@/components/copy-link/copy-link.vue";
 
 const dataTableStore = useDataTableStore();
 const mapService = MapService();
