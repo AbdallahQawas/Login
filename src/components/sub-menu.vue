@@ -1,7 +1,7 @@
 <template>
   <button
     @click="displaySub = !displaySub"
-    class="rounded-md px-4 py-2 w-full flex place-items-center space-x-2 hover:bg-white hover:text-blue-500 text-white font-semibold text-start"
+    class="rounded-md px-4 py-2 w-full flex place-items-center hover:bg-white hover:text-blue-500 text-white font-semibold text-start"
   >
     <component class="w-4 h-4" :is="isComponent(page.icon || '')"></component>
     <span>
@@ -19,16 +19,16 @@
 </template>
 
 <script setup lang="ts">
-import { type pageType } from './page-menu.vue'
-import HeroChevronRight from '../icons/hero-chevron-right.vue'
-import iconifyWater from '@/icons/iconify-water.vue'
-import iconifyZones from '@/icons/iconify-zones.vue'
-import iconifyMonitoring from '@/icons/iconify-monitoring.vue'
-import iconifyReports from '@/icons/iconify-reports.vue'
-import iconifyDevices from '@/icons/iconify-devices.vue'
-import iconifyEpanetDemo from '@/icons/iconify-epanet-demo.vue'
-import iconifyControlCenter from '@/icons/iconify-control-center.vue'
-import { ref } from 'vue'
+import { type pageType } from "./page-menu.vue";
+import HeroChevronRight from "../icons/hero-chevron-right.vue";
+import iconifyWater from "@/icons/iconify-water.vue";
+import iconifyZones from "@/icons/iconify-zones.vue";
+import iconifyMonitoring from "@/icons/iconify-monitoring.vue";
+import iconifyReports from "@/icons/iconify-reports.vue";
+import iconifyDevices from "@/icons/iconify-devices.vue";
+import iconifyEpanetDemo from "@/icons/iconify-epanet-demo.vue";
+import iconifyControlCenter from "@/icons/iconify-control-center.vue";
+import { ref } from "vue";
 
 function isComponent(name: string) {
   let temp = {
@@ -38,15 +38,15 @@ function isComponent(name: string) {
     iconifyMonitoring,
     iconifyReports,
     iconifyDevices,
-    iconifyEpanetDemo
-  }
-  return temp[name]
+    iconifyEpanetDemo,
+  };
+  return temp[name];
 }
 
 type propsType = {
-  page: pageType
-}
-const props = defineProps<propsType>()
+  page: pageType;
+};
+const props = defineProps<propsType>();
 
-let displaySub = ref(false)
+let displaySub = ref(false);
 </script>

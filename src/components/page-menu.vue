@@ -1,16 +1,16 @@
 <template>
-  <div class="h-full w-screen relative lg:w-60">
+  <div class="h-full w-screen relative lg:w-52">
     <div class="bg-sky-500 text-white w-full lg:hidden" @click="hideMenu">
       <icon-wrapper class="h-7 w-7" icon-code="ic:round-close"></icon-wrapper>
     </div>
     <div
-      class="bg-sky-500 items-center h-full w-full lg:w-60 flex flex-col px-6 space-y-1"
+      class="bg-sky-500 h-full w-full lg:w-52 flex flex-col justify-start pl-1"
     >
       <div class="w-full" v-for="(page, index) in pages" :key="index">
         <button
           @click="reroute(page.name)"
           v-if="!page.subPage"
-          class="rounded-md px-4 py-2 flex w-full space-x-2 hover:bg-white hover:text-blue-500 text-white font-semibold"
+          class="rounded-md px-4 py-2 flex w-full hover:bg-white hover:text-blue-500 text-white font-semibold"
         >
           <component
             class="w-5 h-5"

@@ -3,7 +3,7 @@
     v-if="isOpenExpandModal"
     @on-display-modal="() => (isOpenExpandModal = !isOpenExpandModal)"
   >
-    <div class="flex flex-col p-2 w-80 text-blue-500">
+    <div class="flex flex-col p-2 w-full text-blue-500">
       <div class="shadow-md p-2 rounded-md text-left">
         <div class="flex flex-col">
           <div class="flex justify-between">
@@ -22,7 +22,7 @@
   >
     <chart-viewer :chart-config="config"></chart-viewer>
   </base-modal>
-  <div class="flex flex-col p-2 w-80">
+  <div class="flex flex-col p-2 w-full">
     <div class="shadow-md p-2 rounded-md bg-white text-blue-500">
       <div class="flex flex-col">
         <div class="flex justify-between">

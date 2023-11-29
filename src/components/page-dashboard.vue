@@ -4,36 +4,61 @@
       <div class="ml-2">
         <card-grids></card-grids>
       </div>
-      <component-wrapper title="Table">
-        <template #slot1>
-          <div></div>
-        </template>
-        <template #slot2>
-          <data-table
-            v-if="!!data.length"
-            :data="data"
-            :labels="labels"
-            @on-next-data-load="loadNextData"
-          ></data-table>
-        </template>
-      </component-wrapper>
-
-      <component-wrapper title="Map" :expand="true">
-        <template #slot1>
-          <div></div>
-        </template>
-        <template #slot2>
-          <map-viewer v-if="!!layers.length" :layers="layers"></map-viewer>
-        </template>
-      </component-wrapper>
-      <chart-tab
-        v-if="displaySwitch"
-        @on-tab-opened="() => (displaySwitch = !displaySwitch)"
-      ></chart-tab>
-      <chart-grid
-        v-if="!displaySwitch"
-        @on-grid-opened="() => (displaySwitch = !displaySwitch)"
-      ></chart-grid>
+      <div class="m-4">
+        <component-wrapper title="Table">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <data-table
+              v-if="!!data.length"
+              :data="data"
+              :labels="labels"
+              @on-next-data-load="loadNextData"
+            ></data-table>
+          </template>
+        </component-wrapper>
+      </div>
+      <div class="m-4">
+        <component-wrapper title="Map" :expand="true">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <map-viewer v-if="!!layers.length" :layers="layers"></map-viewer>
+          </template>
+        </component-wrapper>
+      </div>
+      <div class="m-4">
+        <chart-tab
+          v-if="displaySwitch"
+          @on-tab-opened="() => (displaySwitch = !displaySwitch)"
+        ></chart-tab>
+        <chart-grid
+          v-if="!displaySwitch"
+          @on-grid-opened="() => (displaySwitch = !displaySwitch)"
+        ></chart-grid>
+      </div>
+      <div class="m-4">
+        <component-wrapper title="Envelop Chart">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <envelop-chart></envelop-chart>
+          </template>
+        </component-wrapper>
+      </div>
+      <div class="m-4">
+        <component-wrapper title="Stacked Chart">
+          <template #slot1>
+            <div></div>
+          </template>
+          <template #slot2>
+            <stacked-bar></stacked-bar>
+          </template>
+        </component-wrapper>
+      </div>
     </template>
   </page-template>
 </template>
@@ -53,6 +78,8 @@ import cardGrids from "./card-grids/card-grids.vue";
 import chartTab from "./chart-tab/chart-tab.vue";
 import chartGrid from "./chart-grid/chart-grid.vue";
 import { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
+import envelopChart from "./envelop-chart/envelop-chart.vue";
+import stackedBar from "./stacked-bar/stacked-bar.vue";
 
 const dataTableStore = useDataTableStore();
 const mapService = MapService();

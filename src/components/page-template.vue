@@ -1,10 +1,10 @@
 <template>
-  <div class="flex flex-row h-screen">
+  <div class="flex flex-row h-screen w-full">
     <div class="h-full" v-if="showMenu">
       <pageMenu @toggle-menu="toggleMenu"></pageMenu>
     </div>
     <div class="flex flex-col w-full h-full">
-      <div>
+      <div class="w-full">
         <pageHeader
           @toggle-menu="toggleMenu"
           page-title=""
