@@ -1,6 +1,9 @@
 <template>
   <page-template>
     <template #content>
+      <div>
+        <copy-link></copy-link>
+      </div>
       <div class="ml-2">
         <card-grids></card-grids>
       </div>
@@ -81,6 +84,7 @@ import { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
 import envelopChart from "./envelop-chart/envelop-chart.vue";
 import stackedBar from "./stacked-bar/stacked-bar.vue";
 import ConsoleService from "@/services/console-service/console-service";
+import copyLink from "./copy-link/copy-link.vue";
 
 const dataTableStore = useDataTableStore();
 const mapService = MapService();
