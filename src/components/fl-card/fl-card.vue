@@ -57,9 +57,11 @@ import baseModal from "../base-modal/base-modal.vue";
 import type { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
 import chartViewer from "../chart-viewer/chart-viewer.vue";
 import type { ChartConfiguration } from "chart.js/auto";
+import type { CDArgsType } from "@/api/PageSettingsAPI/PageSettingsAPI.types";
 
 type propsType = {
   data: DataTableClass;
+  args?: CDArgsType;
 };
 
 const props = defineProps<propsType>();

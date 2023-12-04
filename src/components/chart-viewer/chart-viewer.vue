@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center items-center">
-    <div class="p-2 w-full h-full" id="chartContainer"></div>
+    <div class="p-2 w-full h-full" :id="uniqueId"></div>
   </div>
 </template>
 <script lang="ts" setup>
@@ -14,8 +14,10 @@ type propsType = {
 
 const props = defineProps<propsType>();
 
+let uniqueId = (Math.random() * new Date().getTime()).toString();
+
 function init() {
-  const ctx = document.getElementById("chartContainer");
+  const ctx = document.getElementById(uniqueId);
   let newCanves = document.createElement("canvas");
   ctx?.appendChild(newCanves);
 

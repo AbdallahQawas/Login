@@ -1,4 +1,44 @@
 {
+  "pageSettings": {
+    "data": [
+      {
+        "charts": [
+          {
+            "id": 1,
+            "label": "bar chart",
+            "chart_type": "line"
+          }
+        ],
+        "cards": [
+          {
+            "id": 1,
+            "label": "card",
+            "code": "flCard"
+          },
+          {
+            "id": 2,
+            "label": "card",
+            "code": "dynamicCard",
+            "args": {
+              "label": "abdallah",
+              "value": 2,
+              "icon_code": ""
+            }
+          },
+          {
+            "id": 3,
+            "label": "card",
+            "code": "dynamicCard",
+            "args": {
+              "label": "abdallah2",
+              "value": 3,
+              "icon_code": ""
+            }
+          }
+        ]
+      }
+    ]
+  },
   "data": [
     [
       {

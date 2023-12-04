@@ -3,7 +3,7 @@
     <div class="h-full" v-if="showMenu">
       <pageMenu @toggle-menu="toggleMenu"></pageMenu>
     </div>
-    <div class="flex flex-col w-full h-full">
+    <div class="flex flex-col w-full h-full overflow-hidden">
       <div class="w-full">
         <pageHeader
           @toggle-menu="toggleMenu"

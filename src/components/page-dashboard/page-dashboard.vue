@@ -2,6 +2,9 @@
   <page-template>
     <template #content>
       <div>
+        <dynamic-page></dynamic-page>
+      </div>
+      <div>
         <copy-link></copy-link>
       </div>
       <div class="ml-2">
@@ -85,6 +88,7 @@ import envelopChart from "@/components/envelop-chart/envelop-chart.vue";
 import stackedBar from "@/components/stacked-bar/stacked-bar.vue";
 import ConsoleService from "@/services/console-service/console-service";
 import copyLink from "@/components/copy-link/copy-link.vue";
+import dynamicPage from "../dynamic-page/dynamic-page.vue";
 
 const dataTableStore = useDataTableStore();
 const mapService = MapService();

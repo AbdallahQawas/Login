@@ -2,10 +2,10 @@
   <div>
     <transition name="fade">
       <div>
-        <div class="absolute bg-black opacity-70 inset-0 z-20"></div>
+        <div class="fixed bg-black opacity-70 inset-0 z-20"></div>
 
         <div
-          class="w-full max-w-lg p-3 relative mx-auto my-auto rounded-xl shadow-lg bg-white z-30"
+          class="w-full max-w-lg p-3 absolute mx-auto my-auto rounded-xl shadow-lg bg-white z-30"
         >
           <div>
             <div class="text-center p-3 flex-auto justify-center leading-6">
