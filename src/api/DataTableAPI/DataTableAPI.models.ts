@@ -16,17 +16,20 @@ export class DataTableClass implements IDataTableAPI {
     return Object.assign(newClass, { ...tempOriginal });
   }
   getDataForChart() {
-    const data = this.data.reduce((prev, current) => {
-      prev.push({
-        x: current[0].value,
-        y: current[2].value,
-      });
-      return prev;
-    }, []);
+    const tempData: { x: string; y: string }[] = this.data.reduce(
+      (prev, current) => {
+        prev.push({
+          x: current[0].value,
+          y: current[2].value,
+        });
+        return prev;
+      },
+      [] as { x: string; y: string }[],
+    );
 
     const dataSet = {
       label: "Chart Label",
-      data: data,
+      data: tempData,
       borderWidth: 1,
     };
     return dataSet;

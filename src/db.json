@@ -2,6 +2,23 @@
   "pageSettings": {
     "data": [
       {
+        "args": {
+          "dynamic_filter": {
+            "show": "true",
+            "enable": "false",
+            "filters": [
+              {
+                "label": "filter",
+                "code": "label_filter",
+                "args": {
+                  "default_value": "abdallah",
+                  "target_type": "",
+                  "target_category": ""
+                }
+              }
+            ]
+          }
+        },
         "charts": [
           {
             "id": 1,
@@ -42,330 +59,30 @@
   "data": [
     [
       {
-        "value": "2023-07-29T05:39:35Z",
+        "value": "2022-02-06T16:33:42.177000Z",
         "type": "Date"
       },
       {
-        "value": "Inlet Flow",
+        "value": "abdallah",
         "type": "String"
       },
       {
-        "value": "4",
+        "value": "51.06",
         "type": "String",
         "classes": ""
       }
     ],
     [
       {
-        "value": "2022-04-17T09:54:26Z",
+        "value": "2022-02-06T16:33:42.177000Z",
         "type": "Date"
       },
       {
-        "value": "Inlet Flow",
+        "value": "abdallah",
         "type": "String"
       },
       {
-        "value": "8",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-14T07:06:39.777000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "28.53",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-14T07:05:39.433000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "28.38",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-14T07:04:40.625000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "28.69",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-14T06:02:39.842000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "28.6",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-07T05:19:41.635000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "53.23",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-07T05:18:43.676000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "54.51",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-07T05:17:42.179000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "55.66",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T17:06:55.678000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.01",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T17:05:40.976000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.26",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T17:04:48.853000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.16",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T17:03:44.442000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.26",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T17:02:41.730000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.26",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:51:52.496000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "49.88",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:50:42.259000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.26",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:49:40.036000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.04",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:48:41.344000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.26",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:47:41.941000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.26",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:36:42.595000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "49.98",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:35:41.958000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "49.08",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T16:34:42.378000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.72",
+        "value": "51.06",
         "type": "String",
         "classes": ""
       }
@@ -621,81 +338,6 @@
       },
       {
         "value": "50.1",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T15:36:42.578000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.23",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T15:35:40.681000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "49.98",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T15:34:41.219000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "49.45",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T15:33:43.717000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.1",
-        "type": "String",
-        "classes": ""
-      }
-    ],
-    [
-      {
-        "value": "2022-02-06T15:32:41.080000Z",
-        "type": "Date"
-      },
-      {
-        "value": "Inlet Flow",
-        "type": "String"
-      },
-      {
-        "value": "50.35",
         "type": "String",
         "classes": ""
       }
