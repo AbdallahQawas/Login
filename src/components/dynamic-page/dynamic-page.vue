@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <dynamic-filters></dynamic-filters>
-  </div>
+  <dynamic-filters></dynamic-filters>
+
   <dynamic-card-viewer></dynamic-card-viewer>
   <dynamic-chart-viewer> </dynamic-chart-viewer>
 </template>

@@ -14,10 +14,9 @@ import { useDataTableStore } from "@/services/data-table-service/data-table.serv
 import { DynamicFilterService } from "@/services/dynamic-filter-service/dynamic-filter.service";
 
 const dynamicFilterService = DynamicFilterService();
-
 const dataTableStore = useDataTableStore();
-
 const chartService = ChartService();
+
 let config = ref<ChartConfiguration>({} as ChartConfiguration);
 
 watch(
@@ -26,18 +25,22 @@ watch(
 );
 
 async function init() {
+  console.log(!!dynamicFilterService.disableFilter);
   await chartService.loadChartDetails();
 
   await dataTableStore.loadDataTable();
 
-  let dataForChart = dataTableStore.getDataTable().getDataForChart();
+  let dataTable = dataTableStore.getDataTable();
 
   if (dynamicFilterService.label && dynamicFilterService.disableFilter) {
-    let temp = dataForChart.data.filter(
-      (item) => item.x === dynamicFilterService.label,
+    let filterdData = dataTable.data.filter(
+      (item) => item[1].value === dynamicFilterService.label,
     );
-    dataForChart.data = temp;
+    dataTable.data = filterdData;
   }
+
+  let dataForChart = dataTable.getDataForChart();
+
   config.value = {
     type: chartService.chartDetails[0].chart_type,
     data: {

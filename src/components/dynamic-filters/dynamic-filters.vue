@@ -12,15 +12,17 @@
         <option value="abdallah">abdallah</option>
       </select>
     </div>
-    <div></div>
+
     <div
       :disabled="!switchDisable"
-      class="bg-blue-300 text-white flex justify-center hover:text-white"
-      :class="[!switchDisable ? 'bg-gray-500' : 'bg-blue-500']"
+      class="bg-blue-300 text-white flex justify-center hover:text-white w-16 rounded-md"
+      :class="[
+        !switchDisable ? 'bg-gray-500' : 'bg-blue-500 hover:bg-blue-700',
+      ]"
     >
-      <button>Go</button>
+      <button @click="goClicked">Go</button>
     </div>
-    <div>
+    <div class="mt-1 mr-2">
       <button
         @click="disableFilterClicked"
         :class="[
@@ -30,6 +32,7 @@
         ]"
       >
         <icon-wrapper
+          class="w-7 h-7"
           icon-code="material-symbols:disabled-by-default-outline"
         ></icon-wrapper>
       </button>
@@ -38,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted } from "vue";
 import { DynamicFilterService } from "@/services/dynamic-filter-service/dynamic-filter.service";
 import { ArgsService } from "@/services/args-details-service/args-details.service";
 import { DFCodeType } from "@/api/PageSettingsAPI/PageSettingsAPI.types";
@@ -55,19 +58,16 @@ function disableFilterClicked() {
   dynamicFilterService.setDisableFilter(switchDisable.value);
 }
 
-watch(
-  () => selectedList.value,
-  () => {
-    dynamicFilterService.setLabel(selectedList.value);
-  },
-);
+function goClicked() {
+  dynamicFilterService.setLabel(selectedList.value);
+}
 
 async function init() {
   await argsService.loadArgsDetails();
   let temp = argsService.argsDetails;
 
   dynamicFilterService.setDisableFilter(temp.dynamic_filter?.enable);
-  switchDisable.value = temp.dynamic_filter.enable;
+  switchDisable.value = temp.dynamic_filter?.enable;
 
   let labelFilter = temp.dynamic_filter?.filters.filter(
     (item) => (item.code = DFCodeType.label_filter),
@@ -77,8 +77,6 @@ async function init() {
     selectedList.value = labelFilter[0].args.default_value;
     dynamicFilterService.setLabel(labelFilter[0].args.default_value);
   }
-
-  console.log(temp.dynamic_filter.enable);
 }
 
 onMounted(init);

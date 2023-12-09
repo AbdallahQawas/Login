@@ -4,8 +4,8 @@
       {
         "args": {
           "dynamic_filter": {
-            "show": "true",
-            "enable": "false",
+            "show": true,
+            "enable": true,
             "filters": [
               {
                 "label": "filter",

@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import type { DynamicFilterStateType } from "./dynamic-filter-types";
 
-export const DynamicFilterService = defineStore("DynamicFilter", {
+export const DynamicFilterService = defineStore("FilterService", {
   state: (): DynamicFilterStateType => ({
     label: "",
     disableFilter: false,
@@ -12,7 +12,6 @@ export const DynamicFilterService = defineStore("DynamicFilter", {
     },
     async setDisableFilter(item: boolean) {
       this.$state.disableFilter = item;
-      console.log(!item);
     },
   },
 });

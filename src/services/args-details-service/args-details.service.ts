@@ -5,7 +5,7 @@ import type { ArgsDetailsStateType } from "./args-details.types";
 
 const pageSettingsAPI = PageSettingsAPI();
 
-export const ArgsService = defineStore("argsDetails", {
+export const ArgsService = defineStore("ArgsDetails", {
   state: (): ArgsDetailsStateType => ({
     argsDetails: {} as ArgsDetailsClass,
   }),
