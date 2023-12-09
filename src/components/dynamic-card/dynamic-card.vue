@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col">
-    <div>Label: {{ args.label }}</div>
-    <div>Value: {{ args.value }}</div>
+    <div>Label: {{ args?.label }}</div>
+    <div>Value: {{ args?.value }}</div>
   </div>
 </template>
 

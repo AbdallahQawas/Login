@@ -71,6 +71,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
+
 import pageTemplate from "@/components/page-template/page-template.vue";
 import { type dataType } from "@/components/table-view/table-view.types";
 import dataTable from "@/components/data-table/data-table.vue";

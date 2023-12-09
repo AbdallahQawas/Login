@@ -1,4 +1,8 @@
-import type { CDArgsType, PSData } from "./PageSettingsAPI.types";
+import type {
+  CDArgsType,
+  DynamicFilterArgs,
+  PSData,
+} from "./PageSettingsAPI.types";
 
 export interface IPageSettings {
   data: PSData[];
@@ -57,6 +61,23 @@ export class CardDetailsClass implements ICardDetails {
   copy(original: ICardDetails): CardDetailsClass {
     const tempOriginal = original || this;
     const newClass = new CardDetailsClass();
+    return Object.assign(newClass, { ...tempOriginal });
+  }
+}
+
+export interface IArgsDetails {
+  dynamic_filter: DynamicFilterArgs;
+}
+
+export class ArgsDetailsClass implements IArgsDetails {
+  dynamic_filter = {} as DynamicFilterArgs;
+
+  setData(data: IArgsDetails): ArgsDetailsClass {
+    return Object.assign(this, this.copy(data));
+  }
+  copy(original: IArgsDetails): ArgsDetailsClass {
+    const tempOriginal = original || this;
+    const newClass = new ArgsDetailsClass();
     return Object.assign(newClass, { ...tempOriginal });
   }
 }
