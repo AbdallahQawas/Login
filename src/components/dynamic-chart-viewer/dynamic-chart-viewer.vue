@@ -21,11 +21,10 @@ let config = ref<ChartConfiguration>({} as ChartConfiguration);
 
 watch(
   () => [dynamicFilterService.label, dynamicFilterService.disableFilter],
-  () => init,
+  init,
 );
 
 async function init() {
-  console.log(!!dynamicFilterService.disableFilter);
   await chartService.loadChartDetails();
 
   await dataTableStore.loadDataTable();

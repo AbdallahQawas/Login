@@ -51,7 +51,7 @@
 
 <script lang="ts" setup>
 import { type dataType } from "@/components/table-view/table-view.types";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import iconWrapper from "../icon-wrapper/icon-wrapper.vue";
 import baseModal from "../base-modal/base-modal.vue";
 import type { DataTableClass } from "@/api/DataTableAPI/DataTableAPI.models";
@@ -71,6 +71,12 @@ let isOpenExpandModal = ref(false);
 let isOpenExpandChart = ref(false);
 let dataForChart = ref<Object>({});
 let config = ref<ChartConfiguration>({} as ChartConfiguration);
+
+watch(
+  () => [props.data],
+  () => init(),
+  { deep: true },
+);
 
 function init() {
   cardObject.value = props.data.data[props.data.data.length - 1];
